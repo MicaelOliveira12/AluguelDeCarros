@@ -1,0 +1,5 @@
+br\com\cars\model\Car.class
+br\com\cars\dao\CarDao.class
+br\com\cars\servlet\createCarServlet.class
+br\com\cars\model\Item.class
+br\com\cars\JSON\converterParaJSON.class

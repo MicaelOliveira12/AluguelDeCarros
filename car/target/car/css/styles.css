@@ -1,0 +1,139 @@
+body {
+    background-color: var(--fundo);
+    
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+}
+
+.logo h1 {
+    font-family: 'Aquire';
+    font-size: 24px;
+    color: var(--fundo);
+}
+
+.container {
+    margin: 0;
+}
+
+.container::before {
+    content: " ";
+    background-image: url("/img/bmw.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.20;
+    z-index: -1;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 25vw;
+}
+
+.formulario__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__titulo-texto {
+    margin: 3em 0 1em;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.formulario__campo {
+    margin-bottom: 2em;
+}
+
+.campo__etiqueta {
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.campo__escrita {
+    display: block;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 10px;
+    width: 100%;
+    padding: 1em;
+    margin-top: .5em;
+}
+
+.campo__escrita--menor {
+    width: 50%;
+}
+
+.mensagem-erro {
+    color: red;
+}
+
+.termos__texto {
+    font-size: 13px;
+    line-height: 1.2em;
+    display: inline;
+}
+
+.formulario__botao {
+    background: var(--branco);
+    margin: 2em auto;
+    display: block;
+    border: none;
+    padding: 0.8em 4em;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.formulario__botao--ancora {
+    text-decoration: none;
+    width: 50%;
+}
+
+.campo__escrita--erro {
+    border: 2px solid red;
+}
+
+.formulario__mensagem{
+    display: none;
+}
+
+.formulario__mensagem--sucesso {
+    display: block;
+}
+
+@font-face {
+    font-family: Aquire;
+    src: url(/fonts/Aquire-BW0ox.otf);
+}

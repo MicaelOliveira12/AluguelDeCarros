@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [05/Jul/2023:23:55:45 -0300] "GET / HTTP/1.1" 200 3709 http-bio-8080-exec-1 1322
+0:0:0:0:0:0:0:1 - - [05/Jul/2023:23:55:45 -0300] "GET /css/stylesCadastro.css HTTP/1.1" 304 - http-bio-8080-exec-3 5
+0:0:0:0:0:0:0:1 - - [05/Jul/2023:23:55:45 -0300] "GET /js/script.js HTTP/1.1" 304 - http-bio-8080-exec-2 6
+0:0:0:0:0:0:0:1 - - [05/Jul/2023:23:55:45 -0300] "GET /car/src/main/java/br/com/cars/JSON/Marcas.json HTTP/1.1" 404 1043 http-bio-8080-exec-5 3
