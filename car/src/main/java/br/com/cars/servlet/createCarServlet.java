@@ -21,8 +21,9 @@ public class createCarServlet extends HttpServlet {
         String modelo = request.getParameter("modelo");
         String ano = request.getParameter("ano");
         String opcionais = request.getParameter("opcionais");
+        String transmissao = request.getParameter("transmissao");
 
-        Car car = new Car(marca, modelo, ano, opcionais);
+        Car car = new Car(marca, modelo, ano, opcionais, transmissao);
         new CarDao().createCar(car);
         
         request.getRequestDispatcher("cadastrarVeiculo.jsp").forward(request, response);

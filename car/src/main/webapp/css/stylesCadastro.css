@@ -1,13 +1,14 @@
 body {
     background-color: var(--fundo);
-    
+
 }
-html, body{
+
+html,
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 100%;
-    width: 100%;
+
 }
 
 .logo {
@@ -48,26 +49,28 @@ html, body{
 }
 
 .formulario {
-    border: 2px solid;
     position: static;
     margin: auto;
-    width: 50vw;
-    padding:0;
+    width: 40vw;
+    padding: 0;
 }
 
-.formulario__container{
+.container__titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .formulario__titulo-texto {
-    margin: 1em 0 1em;
+    margin: 1em 0 0.8em;
     font-weight: 600;
     font-size: 28px;
+    color: #fff;
 }
 
 .formulario__campo {
+    display: flex;
+    flex-direction: column;
     margin: 10px 0px;
 }
 
@@ -76,28 +79,59 @@ html, body{
     font-weight: 500;
     line-height: 20px;
     margin-left: 10px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    color: #fff;
 }
 
 .campo__escrita {
     display: block;
-    border: 1.5px solid #000;
-    border-radius: 10px;
+    border: 2px solid #577af3;
+    border-radius: 7px;
     width: 100%;
-    padding: 0.2em 0;
-    margin-top: 0.5em;
-    padding-left: 10px;
+    height: 35px;
+    padding: 0 0 0 0.5em;
     font-size: 16px;
+
 }
 
-.formulario__campo__radio{
-    margin: 10px 0px;
+select {
+    width: 100%;
+    height: 35px;
+    font-family: Verdana, Trebuchet, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    background-color: var(--branco);
+    padding-left: 10px;
+    border-radius: 7px;
+    border: 2px solid #577af3;
+    overflow-y: auto;
+}
+
+.formulario__campo__radio {
     display: flex;
     flex-direction: row;
 }
 
+.campo__etiqueta__radio {
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+.section_radio:hover {
+    border: 1px solid;
+}
+
+.section_radio {
+    cursor: pointer;
+}
+
 .campo__escrita--menor {
     width: 50%;
-    
+
 }
 
 .mensagem-erro {
@@ -134,7 +168,7 @@ html, body{
     border: 2px solid red;
 }
 
-.formulario__mensagem{
+.formulario__mensagem {
     display: none;
 }
 
@@ -142,72 +176,116 @@ html, body{
     display: block;
 }
 
-/*radioButton*/
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232739;
+  flex-direction: column;
+}
 
-.container_radio {
-    display: block;
-    ;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin-right: 10px;
-  }
-  
-  /* Hide the browser's default radio button */
-  .container_radio input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 15px;
-    width: 15px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 1.2px solid;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container_radio:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .container_radio input:checked ~ .checkmark {
-    background-color: #445089;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .container_radio input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .container_radio .checkmark:after {
-    top: 4.4px;
-    left: 4.4px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: white;
-  }
+:root {
+  --cSize: 18px;
+  --cInactive: #577af3;
+  --cActive: #577af3;
+  --particleSize: 0px;
+  --cEasing: ease;
+  --cTiming: 0.5s;
+  --innerPaddingSize: 20px;
+}
+
+.particles-checkbox {
+  height: var(--cSize);
+  width: var(--cSize);
+  display: inline-flex;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 3px #5d6898 solid;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all var(--cTiming) var(--cEasing);
+  margin: 2px;
+}
+.particles-checkbox:focus {
+  outline: 0;
+}
+.particles-checkbox:checked {
+  background-color: var(--cActive);
+}
+.particles-checkbox:checked::after {
+  background-color: #ffffff;
+  height: calc(var(--cSize) * 0.3);
+  width: calc(var(--cSize) * 0.3);
+}
+.particles-checkbox:checked::before {
+  -webkit-animation: particleAnimate var(--cTiming) var(--cEasing) forwards;
+          animation: particleAnimate var(--cTiming) var(--cEasing) forwards;
+}
+.particles-checkbox:checked + span {
+  border-color: #577af3;
+  color: #babed4;
+}
+.particles-checkbox::before, .particles-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: inherit;
+  height: 0px;
+  width: 0px;
+}
+.particles-checkbox::after {
+  transition: all var(--cTiming) var(--cEasing);
+}
+.particles-checkbox::before {
+  --particleSize: 4px;
+  height: var(--particleSize);
+  width: var(--particleSize);
+  z-index: 2;
+}
+
+
+.particles-checkbox-container {
+  display: inline-flex;
+  margin: 2px;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--cTiming) var(--cEasing);
+}
+.particles-checkbox-container span {
+  border: 3px solid transparent;
+  border-radius: calc(var(--innerPaddingSize) * 0.5);
+  padding: 1px;
+  margin-left: 4px;
+  padding: var(--innerPaddingSize);
+  padding-left: calc(var(--cSize) + var(--innerPaddingSize) + 10px);
+  width: 100px;
+  color: #5d6898;
+  transition: all var(--cTiming) var(--cEasing);
+}
+.particles-checkbox-container .particles-checkbox {
+  position: absolute;
+  left: var(--innerPaddingSize);
+}
+
+.link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  display: inline-flex;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: red;
+}

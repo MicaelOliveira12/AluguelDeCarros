@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="css/stylesCadastro.css">
-    <script type="text/javascript" src="js/script.js"></script>"
+    <script type="text/javascript" src="js/script.js"></script>
     <title>LC IMPORTS</title>
 </head>
 <header class="cabeçalho">
@@ -25,36 +25,39 @@
     <main class="container">
         <section class="formulario">
             <form action="/create-car" method="post" class="cadastro-formulario" data-formulario-cadastro>
-                <div class="formulario__container">
-                    <h1 class="formulario__titulo-texto">VE&IacuteCULOS</h1>
+                <div class="container__titulo">
+                    <h1 class="formulario__titulo-texto">CADASTRAR VE&IacuteCULO</h1>
                 </div>
                 <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="marca">Marca:</label>
-                    <select id="marcas">
-                        <option value="marca"></option>
-                    </select>
-                    <input class="campo__escrita" name="marca" id="marca" type="text" required />
-                    <span class="mensagem-erro"></span>
+                    <div class="custom__select">
+                        <label class="campo__etiqueta" for="marca">Marca:</label>
+                        <select class="campo_select" id="marcas" name="marca" required>
+                            <option value=""></option>
+                        </select>
+                        <span class="mensagem-erro"></span>
+                    </div>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="modelo">Modelo:</label>
-                    <input class="campo__escrita" name="modelo" id="modelo" type="text" required />
+                    <select class="campo_select" id="modelo" name="modelo">
+                    </select>
                     <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo__radio">
+                    <label class="particles-checkbox-container">
+                        <input class="particles-checkbox" id="box-shadow" type="radio" name="transmissao"
+                            value="Automatico">
+                        <span>Autom&aacutetico</span>
+                    </label>
+                    <label class="particles-checkbox-container">
+                        <input type="radio" class="particles-checkbox" name="transmissao" value="Manual">
+                        <span>Manual</span>
+                    </label>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="ano">Ano de Fabrica&ccedil&atildeo:</label>
                     <input class="campo__escrita" name="ano" id="ano" type="text" maxlength="4" required />
                     <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__campo__radio">
-                    <label class="container_radio">Manual
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container_radio">Autom&aacute;tico
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="opcionais">Opcionais:</label>

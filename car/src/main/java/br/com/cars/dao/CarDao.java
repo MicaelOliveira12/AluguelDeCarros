@@ -10,7 +10,7 @@ public class CarDao {
     
     public void createCar(Car car) {
 
-        String SQL = "INSERT INTO CARRO (MARCA , MODELO, FABRICACAO, OPCIONAIS) VALUES (?,?,?,?)";
+        String SQL = "INSERT INTO CARRO (MARCA, MODELO, ANO, OPCIONAIS, TRANSMISSAO) VALUES (?,?,?,?,?)";
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
@@ -22,6 +22,7 @@ public class CarDao {
             preparedStatement.setString(2, car.getModelo());
             preparedStatement.setString(3, car.getAno());
             preparedStatement.setString(4, car.getOpcionais());
+            preparedStatement.setString(5, car.getTransmissao());
             preparedStatement.execute();
 
             System.out.println("Carro inserido com sucesso!");

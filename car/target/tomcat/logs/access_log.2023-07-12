@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:29:57 -0300] "GET / HTTP/1.1" 200 3810 http-bio-8080-exec-2 115
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:29:57 -0300] "GET /styles/styles.css HTTP/1.1" 304 - http-bio-8080-exec-3 5
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:29:57 -0300] "GET /css/stylesCadastro.css HTTP/1.1" 200 5533 http-bio-8080-exec-1 7
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:29:57 -0300] "GET /js/script.js HTTP/1.1" 304 - http-bio-8080-exec-4 10
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:29:57 -0300] "GET /img/bmw.jpg HTTP/1.1" 304 - http-bio-8080-exec-7 6
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:29:59 -0300] "GET /img/iconlogoLC.png HTTP/1.1" 404 987 http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:30:46 -0300] "GET /styles/styles.css HTTP/1.1" 304 - http-bio-8080-exec-10 3
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:30:46 -0300] "GET /css/stylesCadastro.css HTTP/1.1" 304 - http-bio-8080-exec-10 3
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:30:46 -0300] "GET /js/script.js HTTP/1.1" 304 - http-bio-8080-exec-2 11
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:30:47 -0300] "GET /img/bmw.jpg HTTP/1.1" 304 - http-bio-8080-exec-2 7
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:30:48 -0300] "GET /img/iconlogoLC.png HTTP/1.1" 404 987 http-bio-8080-exec-2 2
+0:0:0:0:0:0:0:1 - - [12/Jul/2023:19:32:01 -0300] "GET / HTTP/1.1" 200 3810 http-bio-8080-exec-6 2
